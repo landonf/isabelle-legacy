@@ -28,6 +28,7 @@ object Build_Release
   {
     val bundle_infos: List[Bundle_Info] =
       List(Bundle_Info("linux", "Linux", name + "_app.tar.gz", None),
+        Bundle_Info("freebsd", "FreeBSD", name + "_app.tar.gz", None),
         Bundle_Info("windows", "Windows", name + ".exe", None),
         Bundle_Info("macos", "Mac OS X", name + ".dmg", Some(name + "_dmg.tar.gz")))
 

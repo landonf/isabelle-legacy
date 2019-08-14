@@ -17,10 +17,12 @@ object Build_PolyML
     setup: String = "",
     copy_files: List[String] = Nil)
   {
-    def platform_options(arch_64: Boolean): List[String] =
-      if (!arch_64 && Isabelle_System.getenv("ISABELLE_PLATFORM64") == "x86_64-linux")
+    def platform_options(arch_64: Boolean): List[String] = {
+      val platform64 = Isabelle_System.getenv("ISABELLE_PLATFORM64")
+      if (!arch_64 && (platform64 == "x86_64-linux" || platform64 == "x86_64-freebsd"))
         options_multilib
       else options
+    }
   }
 
   private val platform_info = Map(
@@ -33,6 +35,15 @@ object Build_PolyML
     "x86_64-linux" ->
       Platform_Info(
         options = List("LDFLAGS=-Wl,-rpath,_DUMMY_")),
+    "x86-freebsd" ->
+      Platform_Info(
+        options_multilib =
+          List("CC=cc", "CXX=c++", "--build=i386", "CFLAGS=-m32 -O3", "CXXFLAGS=-m32 -O3", "CCASFLAGS=-m32",
+            "LDFLAGS=-Wl,-rpath,_DUMMY_ -L/usr/local/lib", "--without-gmp"),
+        options = List("LDFLAGS=-Wl,-rpath,_DUMMY_")),
+    "x86_64-freebsd" ->
+      Platform_Info(
+        options = List("CC=cc", "CXX=c++", "LDFLAGS=-Wl,-rpath,_DUMMY_ -L/usr/local/lib", "CFLAGS=-I/usr/local/include")),
     "x86-darwin" ->
       Platform_Info(
         options =
@@ -83,7 +94,7 @@ object Build_PolyML
 
     val platform =
       (if (arch_64) "x86_64" else "x86") +
-      (if (Platform.is_windows) "-windows" else if (Platform.is_macos) "-darwin" else "-linux")
+      (if (Platform.is_windows) "-windows" else if (Platform.is_macos) "-darwin" else if (Platform.is_freebsd) "-freebsd" else "-linux")
 
     val info =
       platform_info.get(platform) getOrElse
@@ -133,7 +144,7 @@ object Build_PolyML
     val ldd_files =
     {
       val ldd_pattern =
-        if (Platform.is_linux) Some(("ldd", """\s*libgmp.*=>\s*(\S+).*""".r))
+        if (Platform.is_linux || Platform.is_freebsd) Some(("ldd", """\s*libgmp.*=>\s*(\S+).*""".r))
         else if (Platform.is_macos) Some(("otool -L", """\s*(\S+lib(?:polyml|gmp).*dylib).*""".r))
         else None
       ldd_pattern match {
@@ -176,7 +187,7 @@ object Build_PolyML
 
     /* poly: library path */
 
-    if (Platform.is_linux) {
+    if (Platform.is_linux || Platform.is_freebsd) {
       bash(target, "chrpath -r '$ORIGIN' poly", echo = true).check
     }
     else if (Platform.is_macos) {

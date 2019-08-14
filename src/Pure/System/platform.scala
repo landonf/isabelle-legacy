@@ -15,6 +15,7 @@ object Platform
   /* main OS variants */
 
   val is_linux = System.getProperty("os.name", "") == "Linux"
+  val is_freebsd = System.getProperty("os.name", "") == "FreeBSD"
   val is_macos = System.getProperty("os.name", "") == "Mac OS X"
   val is_windows = System.getProperty("os.name", "").startsWith("Windows")
 
@@ -23,6 +24,7 @@ object Platform
 
   private val Solaris = new Regex("SunOS|Solaris")
   private val Linux = new Regex("Linux")
+  private val FreeBSD = new Regex("FreeBSD")
   private val Darwin = new Regex("Mac OS X")
   private val Windows = new Regex("Windows.*")
 
@@ -45,6 +47,7 @@ object Platform
       System.getProperty("os.name", "") match {
         case Solaris() => "solaris"
         case Linux() => "linux"
+        case FreeBSD() => "freebsd"
         case Darwin() => "darwin"
         case Windows() => "windows"
         case _ => error("Failed to determine operating system platform")

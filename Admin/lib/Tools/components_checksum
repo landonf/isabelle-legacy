@@ -69,9 +69,38 @@ CHECKSUM_DIR="$ISABELLE_HOME/Admin/components"
 CHECKSUM_FILE="$CHECKSUM_DIR/components.sha1"
 CHECKSUM_TMP="$CHECKSUM_DIR/components.sha1.tmp"
 
+sha1_hash() {
+	local BIN
+
+	for BIN in sha1sum sha1; do
+		which "${BIN}" >/dev/null
+		if [ $? -eq 0 ]; then
+			break
+		else
+			BIN=""
+		fi
+	done
+
+	if [ -z "${BIN}" ]; then
+		fail "No sha1 binary found"
+	fi
+
+	case "$BIN" in
+		sha1sum)
+			sha1sum "$@" || return $?
+		;;
+		sha1)
+			sha1 -r "$@" || return $?
+		;;
+		*)
+			fail "Unsupported SHA-1 command: $BIN"
+		;;
+	esac
+}
+
 (
   cd "$COMPONENTS_DIR"
-  sha1sum *.tar.gz | sort -k2 -f > "$CHECKSUM_TMP"
+  sha1_hash *.tar.gz | sort -k2 -f > "$CHECKSUM_TMP"
 )
 
 [ -n "$UPDATE" ] && mv "$CHECKSUM_TMP" "$CHECKSUM_FILE"

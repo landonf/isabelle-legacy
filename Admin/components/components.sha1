@@ -1,7 +1,7 @@
 fbe83b522cb37748ac1b3c943ad71704fdde2f82  bash_process-1.1.1.tar.gz
 bb9ef498cd594b4289221b96146d529c899da209  bash_process-1.1.tar.gz
 81250148f8b89ac3587908fb20645081d7f53207  bash_process-1.2.1.tar.gz
-97b2491382130a841b3bbaebdcf8720c4d4fb227  bash_process-1.2.2.tar.gz
+e9aae352a3fd391459ffe29ee2e61cddb8500b71  bash_process-1.2.2.tar.gz
 9e21f447bfa0431ae5097301d553dd6df3c58218  bash_process-1.2.tar.gz
 a65ce644b6094d41e9f991ef851cf05eff5dd0a9  bib2xhtml-20171221.tar.gz
 e7ffe4238b61a3c1ee87aca4421e7a612e09b836  ci-extras-1.tar.gz
@@ -10,7 +10,7 @@ e7ffe4238b61a3c1ee87aca4421e7a612e09b836  ci-extras-1.tar.gz
 d70bfbe63590153c07709dea7084fbc39c669841  cvc4-1.5-1.tar.gz
 541eac340464c5d34b70bb163ae277cc8829c40f  cvc4-1.5-2.tar.gz
 1a44895d2a440091a15cc92d7f77a06a2e432507  cvc4-1.5-3.tar.gz
-c0d8d5929b00e113752d8bf5d11241cd3bccafce  cvc4-1.5-4.tar.gz
+b9fd10319b451d16d790815f9d96363a14e30cc6  cvc4-1.5-4.tar.gz
 a5e02b5e990da4275dc5d4480c3b72fc73160c28  cvc4-1.5pre-1.tar.gz
 4d9658fd2688ae8ac78da8fdfcbf85960f871b71  cvc4-1.5pre-2.tar.gz
 b01fdb93f2dc2b8bcfd41c6091d91b37d6e240f9  cvc4-1.5pre-3.tar.gz
@@ -44,12 +44,13 @@ e1919e72416cbd7ac8de5455caba8901acc7b44d  e-1.6-2.tar.gz
 b98a98025d1f7e560ca6864a53296137dae736b4  e-1.6.tar.gz
 c11b25c919e2ec44fe2b6ac2086337b456344e97  e-1.8.tar.gz
 a895a96ec7e6fcc275114bb9b4c92b20fac73dba  e-2.0-1.tar.gz
-2ebd7e3067a2cdae3cb8b073345827013978d74b  e-2.0-2.tar.gz
+83c480986231368751a9a63fbbd4ba760b3d51ac  e-2.0-2.tar.gz
 6b962a6b4539b7ca4199977973c61a8c98a492e8  e-2.0.tar.gz
 6d34b18ca0aa1e10bab6413045d079188c0e2dfb  exec_process-1.0.1.tar.gz
 8b9bffd10e396d965e815418295f2ee2849bea75  exec_process-1.0.2.tar.gz
 e6aada354da11e533af2dee3dcdd96c06479b053  exec_process-1.0.3.tar.gz
 ae7ee5becb26512f18c609e83b34612918bae5f0  exec_process-1.0.tar.gz
+8d89886f0951f6f74d82f0650f8257f0bb6dbb16  freebsd_app-20181214.tar.gz
 59a71e08c34ff01f3f5c4af00db5e16369527eb7  Haskabelle-2013.tar.gz
 23a96ff4951d72f4024b6e8843262eda988bc151  Haskabelle-2014.tar.gz
 eccff31931fb128c1dd522cfc85495c9b66e67af  Haskabelle-2015.tar.gz
@@ -92,7 +93,7 @@ e45edcf184f608d6f4a7b966d65a5d3289462693  jdk-8u144.tar.gz
 264e806b9300a4fb3b6e15ba0e2c664d4ea698c8  jdk-8u152.tar.gz
 84b04d877a2ea3a4e2082297b540e14f76722bc5  jdk-8u162.tar.gz
 87303a0de3fd595aa3857c8f7cececa036d6ed18  jdk-8u172.tar.gz
-9ae0338a5277d8749b4b4c7e65fc627319d98b27  jdk-8u181.tar.gz
+90281a1c03afa9edecb717fa777c90c307b6f4dd  jdk-8u181.tar.gz
 cfecb1383faaf027ffbabfcd77a0b6a6521e0969  jdk-8u20.tar.gz
 44ffeeae219782d40ce6822b580e608e72fd4c76  jdk-8u31.tar.gz
 4132cf52d5025bf330d53b96a5c6466fef432377  jdk-8u51.tar.gz
@@ -173,7 +174,7 @@ bd6a448f0e0d5787747f4f30ca661f9c1868e4a7  polyml-5.6-20151223.tar.gz
 262450ac9966abebae2e1d4f9ae703cfe0f5d8d9  polyml-5.7.1-5.tar.gz
 1aeb57877d694db7fe4d4395287cddf3bc77710b  polyml-5.7.1-6.tar.gz
 e3e7e20b1e0e5d5d68df4cd4caa1e1a7410d46b6  polyml-5.7.1-7.tar.gz
-1430533c09b17f8be73798a47a5f409d43a04cf4  polyml-5.7.1-8.tar.gz
+427b8356f882aecc3482bf514bda44663e3f6a06  polyml-5.7.1-8.tar.gz
 171b5783b88522a35e4822b19ef8ba838c04f494  polyml-5.7.1.tar.gz
 80b923fca3533bf291ff9da991f2262a98b68cc4  polyml-5.7-20170217.tar.gz
 5fbcab1da2b5eb97f24da2590ece189d55b3a105  polyml-5.7.tar.gz
@@ -215,12 +216,12 @@ d66796a68ec3254b46b17b1f8ee5bcc56a93aacf  scala-2.12.3.tar.gz
 b447017e81600cc5e30dd61b5d4962f6da01aa80  scala-2.8.1.final.tar.gz
 5659440f6b86db29f0c9c0de7249b7e24a647126  scala-2.9.2.tar.gz
 abe7a3b50da529d557a478e9f631a22429418a67  smbc-0.4.1.tar.gz
-cbd491c0feba1d21019d05564e76dd04f592ccb4  spass-3.8ds-1.tar.gz
+d206d9b84c6df5e00c6d9fd87bed1ce6213c2e2f  spass-3.8ds-1.tar.gz
 43b5afbcad575ab6817d2289756ca22fd2ef43a9  spass-3.8ds.tar.gz
 b016a785f1f78855c00d351ff598355c3b87450f  sqlite-jdbc-3.18.0-1.tar.gz
 b85b5bc071a59ef2a8326ceb1617d5a9a5be41cf  sqlite-jdbc-3.18.0.tar.gz
 e56117a67ab01fb24c7fc054ede3160cefdac5f8  sqlite-jdbc-3.20.0.tar.gz
-27aeac6a91353d69f0438837798ac4ae6f9ff8c5  sqlite-jdbc-3.23.1.tar.gz
+a2c630aa697e3578237ae25fd2edd36031fc59e6  sqlite-jdbc-3.23.1.tar.gz
 8d20968603f45a2c640081df1ace6a8b0527452a  sqlite-jdbc-3.8.11.2.tar.gz
 2369f06e8d095f9ba26df938b1a96000e535afff  ssh-java-20161009.tar.gz
 1f4a2053cc1f34fa36c4d9d2ac906ad4ebc863fd  sumatra_pdf-2.1.1.tar.gz
@@ -231,7 +232,7 @@ e56117a67ab01fb24c7fc054ede3160cefdac5f8  sqlite-jdbc-3.20.0.tar.gz
 f5afcc82f8e734665d38867e99475d3ad0d5ed15  sumatra_pdf-3.1.1.tar.gz
 8486387f61557147ec06b1f637117c017c8f0528  sumatra_pdf-3.1.2.tar.gz
 869ea6d8ea35c8ba68d7fcb028f16b2b7064c5fd  vampire-1.0.tar.gz
-399f687b56575b93e730f68c91c989cb48aa34d8  vampire-4.2.2.tar.gz
+e4533352440d5196d25da666b40c41bf5a078fe5  vampire-4.2.2.tar.gz
 98c5c79fef7256db9f64c8feea2edef0a789ce46  verit-2016post.tar.gz
 81d21dfd0ea5c58f375301f5166be9dbf8921a7a  windows_app-20130716.tar.gz
 fe15e1079cf5ad86f3cbab4553722a0d20002d11  windows_app-20130905.tar.gz
@@ -255,5 +256,5 @@ d94a716502c8503d63952bcb4d4176fac8b28704  z3-4.0.tar.gz
 a8917c31b31c182edeec0aaa48870844960c8a61  z3-4.3.2pre-1.tar.gz
 06b30757ff23aefbc30479785c212685ffd39f4d  z3-4.3.2pre.tar.gz
 93e7e4bddc6afcf87fe2b6656cfcb1b1acd0a4f8  z3-4.4.0pre-1.tar.gz
-b1bc411c2083fc01577070b56b94514676f53854  z3-4.4.0pre-2.tar.gz
+9b084f17c04abf07600898cdc09008700291c4f8  z3-4.4.0pre-2.tar.gz
 517ba7b94c1985416c5b411c8ae84456367eb231  z3-4.4.0pre.tar.gz
