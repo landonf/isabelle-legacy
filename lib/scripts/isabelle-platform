@@ -22,6 +22,18 @@ case $(uname -s) in
         ;;
     esac
     ;;
+  FreeBSD)
+    ISABELLE_PLATFORM_FAMILY="freebsd"
+    case $(uname -m) in
+      i386)
+        ISABELLE_PLATFORM32=x86-freebsd
+        ;;
+      amd64)
+        ISABELLE_PLATFORM32=x86-freebsd
+        ISABELLE_PLATFORM64=x86_64-freebsd
+        ;;
+    esac
+    ;;
   Darwin)
     ISABELLE_PLATFORM_FAMILY="macos"
     case $(uname -m) in
